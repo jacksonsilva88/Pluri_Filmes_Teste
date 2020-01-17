@@ -1,0 +1,7 @@
+.header > span> a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }

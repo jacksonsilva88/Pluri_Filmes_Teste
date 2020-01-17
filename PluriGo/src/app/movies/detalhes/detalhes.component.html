@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="container">
+    <section class="filmes-info">
+        <div class="column">
+            <div class="poster">
+                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{detalhes?.poster_path}}" alt="">
+            </div>
+            <div class="info-meta">
+                <h2>{{ detalhes?.title }}</h2>
+                <div class="resume_filme">
+                    <h4>Overview</h4>
+                    <p>
+                    {{detalhes?.overview}}
+                    </p>
+                    <div class="data-director">
+                        <mat-tab-group dynamicHeight>
+                            <mat-tab label="Titulo Original">
+                              <div class="tab-content mat-elevation-z4">
+                                <h4 class="mat-h4">{{detalhes?.original_title}}</h4>
+                              </div>
+                            </mat-tab>
+                            <mat-tab label="Tagline">
+                                <div class="tab-content mat-elevation-z4">
+                                  <h4 class="mat-h4">{{detalhes?.tagline}}</h4>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Ano de Lançamento">
+                                <div class="tab-content mat-elevation-z4">
+                                  <h4 class="mat-h4">{{detalhes?.release_date}}</h4>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Duração">
+                                <div class="tab-content mat-elevation-z4">
+                                  <h4 class="mat-h4">{{detalhes?.runtime}} Minutos</h4>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,50 @@
+.layout-grid{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.filme-card {
+    max-width: 300px;
+    margin: 15px;
+  }
+  .head-title{
+   margin:15px;
+
+  }
+  .head-title > h1{
+    font-weight: 400;
+  }
+  .acao-cartao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+  }
+  .acao-cartao > a{
+      width: 50%;
+  }
+  .thumbs{
+    justify-content: space-around;
+    display: flex;
+      width: 50%;
+  }
+  @media (min-width: 768px){
+    .layout-grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+}
+@media (min-width: 1024px){
+    .layout-grid{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    
+}
+@media (min-width: 1440px){
+    .layout-grid{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    
+}

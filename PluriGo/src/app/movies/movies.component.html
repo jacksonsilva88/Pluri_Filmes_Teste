@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="head-title" color="primary">
+        <h1 class="mat-headline" color="primary">Lançamentos</h1>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="layout-grid">
+
+   
+        <mat-card class="filme-card" *ngFor="let i of filme">
+            <mat-card-header>
+                <mat-card-title>{{i.title}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{i.poster_path}}" alt="Poster do Filme: {{i.title}} ">
+            <mat-card-actions class="acao-cartao">
+                <a routerLink='detalhes/{{i.id}}' mat-raised-button color="primary" matTooltip="Resumo, ano de lançamento e mais informações"
+                aria-label="Button that displays a tooltip when focused or hovered over">Mais Informações</a>
+                <mat-chip-list aria-label="Fish selection" class="thumbs">
+                    <mat-chip><mat-icon>thumb_up</mat-icon></mat-chip>
+                    <mat-chip><mat-icon>thumb_down</mat-icon></mat-chip>
+                </mat-chip-list>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
